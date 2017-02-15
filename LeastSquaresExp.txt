@@ -1,0 +1,18 @@
+LinearRegression fits a linear mode with coefficients w=[w1,w2,wn] to minimize the residual sum of squares between the observed responses in the dataset,and the responses predicted by the linear approximation.Mathematically it
+solves a problem of the form:
+                                 min||Xw-y||^2
+翻译
+线性回归拟合一个带有w=[w1,w2...wn]的线性模型，来最小化数据集的实际值与预测值的残差平方和。
+数学意义上即解决了如下问题：min||Xw-y||^2
+However,coefficient estimates for Ordinary Least Squares rely on the independence of the model terms.When terms are correlated and the columns of the 
+design matrix X have an approximate linear dependence,the design matrix bec-omes close to singular and as a result,the least-squares estimate becomes 
+highly sensitive to random errors in the observed response,producing a large
+variance.This situation of multicollinearity can arise,for example,when data
+are collected without an experimental design.
+翻译
+然而，普通最小二乘参数估计依赖于模型参数的独立性。当参数是相关的，设计矩阵X的列有近似线性相关性，设计矩阵则会接近奇异，结果是，最小二乘估计对于实际观察值的随机误差高度敏感，产生一个较大的方差。当没有经过实验设计的数据被收集时，多重共线性的情况可能会产生。
+This method computes the least squares solution using a singular value 
+decomposition of X.if X is a matrix of size(n,p) this method has a cost of
+O(np^2),assuming that n>=p
+翻译
+这一方法通过X的奇异值分解来计算最小二乘解。如果X的大小为（n,p)，这一方法的时间复杂度位O(np^2),假设n>=p.

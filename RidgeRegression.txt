@@ -1,0 +1,7 @@
+Ridge regression addresses some of the problems of Ordinary Least Squares byimposing a penalty  on the size of coefficients.The ridge coefficients 
+minimize a penalized residual sum of squares:
+                        min ||Xw-y||^2+a*||w||^2
+a>0 is a complexity parameter that controls the amount of shrinkage:the 
+larger the value of a,the greater the amount of shrinkage and thus the 
+coefficients become more robust to collinearity.
+As with other linear models,Ridge wi
